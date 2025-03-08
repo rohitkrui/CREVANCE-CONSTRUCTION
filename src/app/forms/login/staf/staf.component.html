@@ -1,0 +1,29 @@
+<p>staf works!</p>
+<!-- <app-staf-form></app-staf-form> -->
+
+<div>
+    <a routerLink="stafForm">Staff Form</a>
+    <router-outlet></router-outlet>
+</div>
+<div>
+    <h2>Student List</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Date of Birth</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of studentGetDetails">
+                <td>{{ student.firstName }}</td>
+                <td>{{ student.lastName }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.DOB }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
